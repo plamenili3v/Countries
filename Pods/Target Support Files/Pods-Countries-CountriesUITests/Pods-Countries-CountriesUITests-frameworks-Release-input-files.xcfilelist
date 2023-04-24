@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Countries-CountriesUITests/Pods-Countries-CountriesUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
