@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="pY4-Hu-kfo">
+            <objects>
+                <navigationController title="Countries" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-630"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="yUG-lL-AsK">
+            <objects>
+                <viewController storyboardIdentifier="CountryDetailsViewController" title="Detail" id="JEX-9P-axG" customClass="CountryDetailsViewController" customModule="MobileTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nd-mm-rA9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-sc-f1h">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5AV-eB-W0I">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLY-ur-Svt">
+                                                        <rect key="frame" x="95" y="0.0" width="224" height="224"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="tLY-ur-Svt" secondAttribute="height" multiplier="1:1" id="xAb-Gl-SXn"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-Ph-fAe" userLabel="Capital And Population">
+                                                        <rect key="frame" x="0.0" y="224" width="414" height="55"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ob2-BS-IBN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-fN-bh6" customClass="TitledTextLabel" customModule="MobileTask" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rW-pD-nMk" customClass="TitledTextLabel" customModule="MobileTask" customModuleProvider="target">
+                                                                        <rect key="frame" x="207" y="0.0" width="207" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="0.19607843137254902" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="ob2-BS-IBN" secondAttribute="bottom" id="9eI-Bw-XsC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ob2-BS-IBN" secondAttribute="trailing" id="EWe-uS-VjM"/>
+                                                            <constraint firstItem="ob2-BS-IBN" firstAttribute="top" secondItem="sEG-Ph-fAe" secondAttribute="top" id="KzI-Ev-hMY"/>
+                                                            <constraint firstItem="ob2-BS-IBN" firstAttribute="leading" secondItem="sEG-Ph-fAe" secondAttribute="leading" id="ckG-xN-Ouu"/>
+                                                            <constraint firstAttribute="height" constant="55" id="jmh-3g-Vg7"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="225" verticalCompressionResistancePriority="950" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ce-KJ5">
+                                                        <rect key="frame" x="0.0" y="279" width="414" height="627"/>
+                                                    </mapView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sEG-Ph-fAe" secondAttribute="trailing" id="4X7-vQ-iCv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oMn-ce-KJ5" secondAttribute="trailing" id="83g-gW-jXV"/>
+                                                    <constraint firstItem="oMn-ce-KJ5" firstAttribute="leading" secondItem="5AV-eB-W0I" secondAttribute="leading" id="ZZB-bw-nyw"/>
+                                                    <constraint firstItem="sEG-Ph-fAe" firstAttribute="leading" secondItem="5AV-eB-W0I" secondAttribute="leading" id="yfO-o4-HM3"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.19607843137254902" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="5AV-eB-W0I" firstAttribute="top" secondItem="oqD-sc-f1h" secondAttribute="top" id="B54-ZD-EH7"/>
+                                            <constraint firstAttribute="trailing" secondItem="5AV-eB-W0I" secondAttribute="trailing" id="J5E-TW-IlL"/>
+                                            <constraint firstAttribute="bottom" secondItem="5AV-eB-W0I" secondAttribute="bottom" id="rVp-1g-eV7"/>
+                                            <constraint firstItem="5AV-eB-W0I" firstAttribute="leading" secondItem="oqD-sc-f1h" secondAttribute="leading" id="vOB-Cg-LuD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oqD-sc-f1h" secondAttribute="bottom" id="3au-mA-xAb"/>
+                                    <constraint firstItem="oMn-ce-KJ5" firstAttribute="height" secondItem="6nd-mm-rA9" secondAttribute="height" multiplier="0.7" id="Dlj-BL-1RF"/>
+                                    <constraint firstItem="oqD-sc-f1h" firstAttribute="width" secondItem="6nd-mm-rA9" secondAttribute="width" id="IEt-V4-vo3"/>
+                                    <constraint firstAttribute="trailing" secondItem="oqD-sc-f1h" secondAttribute="trailing" id="LGQ-8O-w1D"/>
+                                    <constraint firstItem="tLY-ur-Svt" firstAttribute="height" secondItem="6nd-mm-rA9" secondAttribute="height" multiplier="0.25" id="QUr-h7-8I6"/>
+                                    <constraint firstItem="oqD-sc-f1h" firstAttribute="leading" secondItem="6nd-mm-rA9" secondAttribute="leading" id="VMV-jK-8co"/>
+                                    <constraint firstItem="oqD-sc-f1h" firstAttribute="top" secondItem="6nd-mm-rA9" secondAttribute="top" id="iSy-hN-PQA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
+                        <color key="backgroundColor" red="0.0" green="0.19607843137254902" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6nd-mm-rA9" secondAttribute="bottom" id="EsB-i8-9Z4"/>
+                            <constraint firstItem="6nd-mm-rA9" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="MM7-pn-9eZ"/>
+                            <constraint firstItem="6nd-mm-rA9" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="m41-pj-6fN"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="6nd-mm-rA9" secondAttribute="trailing" id="r9S-vN-8p2"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Country Details" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="capitalView" destination="ivT-fN-bh6" id="GCo-3b-cXG"/>
+                        <outlet property="flagPhotoImageView" destination="tLY-ur-Svt" id="UTt-Dc-N2o"/>
+                        <outlet property="mapView" destination="oMn-ce-KJ5" id="o79-D5-wdC"/>
+                        <outlet property="populationAndCapitalContainer" destination="sEG-Ph-fAe" id="zMg-p0-vnI"/>
+                        <outlet property="populationView" destination="3rW-pD-nMk" id="9ij-nr-ird"/>
+                        <outlet property="scrollView" destination="6nd-mm-rA9" id="246-1L-50F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="129"/>
+        </scene>
+        <!--Countries Split View Controller-->
+        <scene sceneID="Nki-YV-4Qg">
+            <objects>
+                <splitViewController id="H1p-Uh-vWS" customClass="CountriesSplitViewController" customModule="MobileTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
+                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-330"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="smW-Zh-WAh">
+            <objects>
+                <tableViewController storyboardIdentifier="CountriesListMasterViewController" title="Countries" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="CountriesListMasterViewController" customModule="MobileTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showCountryDetails" id="Bp7-cq-wBY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-630"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r7l-gg-dq7">
+            <objects>
+                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" destinationCreationSelector="asd:sender:" id="GKi-kA-LjT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bp7-cq-wBY"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
